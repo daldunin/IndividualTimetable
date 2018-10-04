@@ -21,7 +21,10 @@ namespace TimeTable
         public KnowledgeByCourse(Knowledge knowledge, Course providedBy)
         {
             this.Knowledge = knowledge;
-            this.providedBy.Add(providedBy);
+            if (providedBy is null)
+                this.providedBy = null;
+            else
+                this.providedBy.Add(providedBy);
         }
 
         public void AddCourse(Course course)

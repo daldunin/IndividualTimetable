@@ -10,16 +10,20 @@ namespace TimeTable
     {
         private int id;
         private string name;
-        private int durationInHours;
+        private int durationInDays;
         private List<Knowledge> prerequisites;
         private List<Knowledge> postrequisites;
         private List<Availability> availabilities;
 
-        public Course(int id, string name, int durationInHours, List<Knowledge> prerequisites, List<Knowledge> postrequisites, List<Availability> availabilities)
+        public string Name { get => name; set => name = value; }
+        internal List<Knowledge> Prerequisites { get => prerequisites; set => prerequisites = value; }
+        internal List<Knowledge> Postrequisites { get => postrequisites; set => postrequisites = value; }
+
+        public Course(int id, string name, int durationInDays, List<Knowledge> prerequisites, List<Knowledge> postrequisites, List<Availability> availabilities)
         {
             this.id = id;
-            this.name = name;
-            this.durationInHours = durationInHours;
+            this.Name = name;
+            this.durationInDays = durationInDays;
             this.prerequisites = prerequisites;
             this.postrequisites = postrequisites;
             this.availabilities = availabilities;

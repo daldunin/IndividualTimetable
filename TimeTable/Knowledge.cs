@@ -11,10 +11,12 @@ namespace TimeTable
         private int id;
         private string name;
 
+        public string Name { get => name; set => name = value; }
+
         public Knowledge(int id, string name)
         {
             this.id = id;
-            this.name = name;
+            this.Name = name;
         }
     }
 }
