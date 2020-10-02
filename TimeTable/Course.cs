@@ -29,6 +29,11 @@ namespace TimeTable
             this.availabilities = availabilities;
         }
 
+        public renameCourse(string newName)
+        {
+            this.Name = newName;
+        }
+
         public bool checkIfAvailableByKnowledge(List<KnowledgeByCourse> knowledges)
         {
             bool allFound = true;
