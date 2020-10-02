@@ -18,5 +18,10 @@ namespace TimeTable
             this.id = id;
             this.Name = name;
         }
+
+        public renameKnowledge(string newName)
+        {
+            this.Name = newName;
+        }
     }
 }
